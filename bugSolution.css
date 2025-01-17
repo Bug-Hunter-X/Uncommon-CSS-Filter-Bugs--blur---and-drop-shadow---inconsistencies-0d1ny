@@ -1,0 +1,17 @@
+/* bugSolution.css */
+
+/* Feature detection for blur support */
+@supports not (filter: blur(1px)) {
+  .blurred {
+    /* fallback style for browsers without proper blur support */
+    opacity: 0.7; /* Simulate a blur effect using opacity */
+  }
+}
+
+/* Handling drop-shadow issues */
+.drop-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Alternative drop-shadow using text-shadow*/
+  /*Other styles that should not be visually affected by the drop-shadow*/
+}
+
+/*For more complex cases, consider using JavaScript to achieve cross-browser compatibility*/
